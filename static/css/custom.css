@@ -1,0 +1,161 @@
+body {
+    line-height: 1.7em;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    border-radius: 0px 0 5px 5px;
+    color: rgb(34, 34, 34);
+    padding-bottom: 1em;
+}
+
+header, h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+header h1 {
+    margin-top: 0px;
+    padding-top: 1em;
+    font-weight: 400;
+}
+
+header p.welcome {
+    font-size: 1.2em;
+}
+
+.navbar {
+    border: none;
+}
+
+ul.navbar-nav {
+    font-size: 1.15em;
+}
+
+ul.navbar-nav li.active a {
+    border-radius: 5px 5px 0 0;
+}
+
+ul.navbar-nav li.active {
+    font-weight: 400;
+}
+
+.blockgrid > ul > li {
+    box-shadow: 0 0 2px #888;
+    border-width: 1px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.blockgrid > ul > li > article  {
+    margin-top: 1.5em;
+    padding: 0 1em 1em;
+}
+
+article ul {
+    padding-left: 1.5em;
+}
+
+@media screen and (min-width: 992px) {
+    /* Activate the 2-column layout if the screen is large enough */
+    .blockgrid > ul > li {
+        width: 48%;
+        float: left;
+        margin-bottom: 40px;
+    }
+
+    .blockgrid > ul > li:nth-child(even) {
+        float: right;
+    }
+
+    .blockgrid > ul > li.left {
+        float: left;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .blockgrid h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.blockgrid h3, .blockgrid h2 {
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #fff;
+}
+
+.blockgrid h2 {
+    padding-bottom: 22px;
+}
+
+.blockgrid h3 {
+    line-height: 40px;
+    margin: 0px;
+    width: 100%;
+    margin-bottom: -1em;
+    font-size: 1.7em;
+}
+
+.blockgrid img {
+    margin-bottom: 1em;
+}
+
+/* color of each section */
+.blockgrid h3 {
+    color: rgb(34, 34, 34);
+}
+
+/* style of the "work" table */
+td.workposition {
+    vertical-align: text-top;
+}
+
+td.workdescription {
+    vertical-align: text-top;
+}
+
+table#resume td {
+    padding-bottom: 1.3em;
+}
+
+table#resume td:nth-child(even) {
+    padding-left: 1.3em;
+}
+
+table#resume td.last {
+    padding-bottom: 0em;
+}
+
+span.workposition {
+    font-weight: bold;
+}
+
+span.workplace {
+    display: block;
+}
+
+span.workperiod {
+    display: block;
+    font-size: 0.8em;
+}
+
+span.techlist {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    padding-top: 0.4em;
+}
+
+footer {
+    color: rgb(127, 140, 141);
+    background: rgb(236, 240, 241);
+    border-radius: 5px 5px 0 0;
+    padding: 15px;
+}
