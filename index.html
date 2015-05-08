@@ -34,7 +34,7 @@
                         <img class="img-thumbnail center-block" src="static/img/image.jpg">
                         <p>
                             I'm a {{age}} year old French <b>backend engineer</b>.
-                            I have fierce self-learning skills and am a heavy user and promoter of both free (as in freedom) software, and community. I enjoy hacking with <b>Python</b> and <b>bash/zsh</b>, but also languages lower in the stack, like C or <b>Go</b>. I have a strong grasp of what's behind the scene of a web application (especially python): from code to distributed computing, caching, deployment and server administration, I try to be as <b>polyvalent</b> as one can be.
+                            I have fierce self-learning skills and am a heavy user and promoter of both free (as in freedom) software, and community. I enjoy hacking with <b>distributed systems</b>, <b>Python</b> and bash/zsh, but also languages lower in the stack, like C or <b>Go</b>. I have a strong grasp of what's behind the scene of a web application (especially python): from code to distributed computing, caching, deployment and server administration, I try to be as <b>polyvalent</b> as one can be.
                         </p>
 
                         <p>
@@ -70,8 +70,18 @@
                                         <span class="workperiod">Current</span>
                                     </td>
                                     <td class="workposition">
-                                        <p>Backend web development, test and deployment automation, backend architecture and scalability.</p>
-                                        <span class="techlist">Python, Django, Ansible</span>
+                                        <p>Re-implementation of the backend of a large, monolithic django application exposing complex advertisement data into a distributed application:
+                                        <ul>
+                                            <li>re-establishing good practices: unit testing, coding standard, code review, continuous integration</li>
+                                            <li>distribution of workload across a cluster of servers</li>
+                                            <li>porting of data import jobs from cron jobs to distributed tasks, leading to a high speedup</li>
+                                            <li>performance monitoring and optimisation</li>
+                                            <li>porting the application from Django 1.5 / Python 2.7 to Django 1.8 / Python 3.4</li>
+                                            <li>development of the Ansible code deployment playbooks</li>
+                                            <li>server administration</li>
+                                        </ul>
+                                        </p>
+                                        <span class="techlist">Django, Celery, Ansible</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -82,7 +92,7 @@
                                     </td>
                                     <td class="workposition">
                                         <p>Building systems to support the Land Registry Act (2012), specifically allowing the creation of Advance Notices when selling/transferring deeds. Integration of new and legacy systems.</p>
-					<p>Annex missions: third line customer support and internal Python mentoring.</p>
+					                    <p>Annex missions: third line customer support and internal Python mentoring.</p>
                                         <span class="techlist">Celery, Flask, AngularJS, mongoDB, gunicorn</span>
                                     </td>
                                 </tr>
