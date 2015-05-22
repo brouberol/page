@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Balthazar Rouberol</title>
+    <meta name="description" content="Balthazar Rouberol's personal webpage">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/custom.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300|Merriweather:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target="#navbar-menu" >
+    <a id="home"></a>
+    <div class="container" >
+        <header>
+            <section id="title">
+                <h1>Balthazar Rouberol</h1>
+                <p class="welcome">Welcome to my personal page.</p>
+            </section>
+        </header>
+
+        <div class="blockgrid" id="about">
+            <h2>About me</h2>
+            <ul class="list-unstyled">
+                <li>
+                    <h3>Hi, that's me!</h3>
+                    <hr/>
+                    <article>
+                        <img class="img-thumbnail center-block" src="static/img/image.jpg">
+                        <p>
+                            I'm a 24 year old French <b>backend engineer</b>.
+                            I have fierce self-learning skills and am a heavy user and promoter of both free (as in freedom) software, and community. I enjoy hacking with <b>distributed systems</b>, <b>Python</b> and bash/zsh, but also languages lower in the stack, like C or <b>Go</b>. I have a strong grasp of what's behind the scene of a web application (especially python): from code to distributed computing, caching, deployment and server administration, I try to be as <b>polyvalent</b> as one can be.
+                        </p>
+
+                        <p>
+                            I currently live in Lyon - France, as a backend engineer for a web agency called <a href="http://askin.fr">Askin</a>.
+                        </p>
+
+                        <p>
+                            I like to talk. A lot. So much, that sometimes, I put it to good use, and <b>give talks</b> (mostly about Python, sometimes Go) in front of people. I focus on introductory talks (about a language, a framework, a library, etc), as I strongly feel that the technical world needs more diversity. I'm happy to try changing that at my humble level by helping people jump the bridge and start coding :)
+                        </p>
+
+                        <p>
+                            I also enjoy tinkering with my <b>Raspberry Pi</b>, cooking, music (playing as much as listening), reading nerdy books and French classics, as well as watching the entire Doctor Who series backwards (all that time travel makes it surprisingly possible).
+                        </p>
+                    </article>
+                </li>
+
+                <li>
+                    <h3>Work and resume</h3>
+                    <hr/>
+                    <article>
+                        <table id="resume">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Backend engineer</span>
+                                        <span class="workplace"><a href="http://askin.fr/">Askin</a></span>
+                                        <span class="workperiod">Current</span>
+                                    </td>
+                                    <td class="workposition">
+                                        <p>Re-implementation of the backend of a large, monolithic django application exposing complex advertisement data into a distributed application:
+                                        <ul>
+                                            <li>re-establishing <b>good practices</b>: unit testing, coding standard, code review, continuous integration</li>
+                                            <li>distribution of workload across a cluster of servers</li>
+                                            <li>porting of data import jobs from cron jobs to distributed tasks, leading to a high speedup</li>
+                                            <li>performance <b>monitoring and optimisation</b></li>
+                                            <li>porting the application from Django 1.5 / Python 2.7 to Django 1.8 / Python 3.4</li>
+                                            <li>development of the Ansible <b>code deployment</b> playbooks</li>
+                                            <li>server administration</li>
+                                        </ul>
+                                        </p>
+                                        <span class="techlist">Django, Celery, Ansible</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Idependant contractor</span>
+                                        <span class="workplace"><a href="http://www.metallapan.se/">Metallapan</a></span>
+                                        <span class="workperiod">Oct 2014 - Jan 2015</span>
+                                    </td>
+                                    <td class="workposition">
+                                        <p>Building systems to support the Land Registry Act (2012), specifically allowing the creation of Advance Notices when selling/transferring deeds. Integration of new and legacy systems.</p>
+					                    <p>Annex missions: third line customer support and internal Python mentoring.</p>
+                                        <span class="techlist">Celery, Flask, AngularJS, mongoDB, gunicorn</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">R&amp;D software engineer</span>
+                                        <span class="workplace"><a href="http://mapado.com">Mapado</a></span>
+                                        <span class="workperiod">Nov 2012 - Oct 2014</span>
+                                    </td>
+                                    <td class="workposition">
+                                        Implementation of an automatic <b>datamining/text-mining</b> pipeline aggregating and merging data from various sources (API dump, Facebook, database dump, crawled webpages, DBPedia, etc) into an informative event description. The pipeline processes tens of thousands of documents every day, using internal <b>webservices</b> and <b>distributed worker queues</b>.
+
+                                        <span class="techlist">Python, Scikit-learn, Scrapy, Flask, uWSGI, Celery, ElasticSearch, mongoDB, Nginx</span><br/>
+
+                                        Design and implementation of a JS framework mapping in-house client data to external forms, thus filling them automatically using a declarative language.
+
+                                        <span class="techlist">nodeJS, CasperJS</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Software developer</span>
+                                        <span class="workplace"><a href="http://kozea.fr/">Kozea</a></span>
+                                        <span class="workperiod">Oct - Nov 2012</span>
+                                    </td>
+                                    <td class="workposition">
+                                        Development of <a href="http://pynuts.org">Pynuts</a>, a document/database oriented Flask extension simplifying the implementation of the generic views of a webapp.
+
+                                        <span class="techlist">Flask, SQLAlchemy</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Independant contractor</span>
+                                        <span class="workplace"><a href="http://emilytoop.com/tiny-ears/">TinyEars</a></span>
+                                        <span class="workperiod">June 2012</span>
+                                    </td>
+                                    <td class="workdescription">
+                                        Voice recognition research.
+                                        Adapting and training of a PocketSphinx acoustic model using pre-recorded data, in order to enhance recognition performances on feminine voices.
+                                        <span class="techlist">CMU Sphinx, PocketSphinx</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Intern</span>
+                                        <span class="workplace"><a href="http://strongsteam.com">Strongsteam</a></span>
+                                        <span class="workperiod">Feb - July 2012</span>
+                                    </td>
+                                    <td class="workdescription">
+                                        Development of a data-mining and A.I. cloud-based API to extract information out of images, video, audio and text files : RESTful API development, OCR research. Home based. See <a href="https://www.youtube.com/watch?v=ZW5hC4y9nuU">our</a> <a href="https://www.youtube.com/watch?v=b1OkQLAazWw">demos</a>.
+
+                                        <span class="techlist">Flask, ElasticSearch, Tesseract</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workplace"><abbr title="National Institude of Applied Sciences">INSA</abbr> de Lyon</span>
+                                        <span class="workperiod">Jan - Feb 2012</span>
+                                    </td>
+                                    <td class="workdescription">
+                                        Development of an alumni network.
+
+                                        <span class="techlist">Django, Twitter Bootstrap</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition">
+                                        <span class="workposition">Intern</span>
+                                        <span class="workplace">A+A</span>
+                                        <span class="workperiod">April - July 2011</span>
+                                    </td>
+                                    <td class="workdescription">
+                                        Development of a statistical analysis and vizualisation webapp.
+
+                                        <span class="techlist">C#, LINQ</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="workposition last">
+                                        <span class="workposition">Intern</span>
+                                        <span class="workplace"><abbr title="Center of Molecular and Cellular Genetics">CGMC</abbr></span>
+                                        <span class="workperiod">June - Aug 2010</span>
+                                    </td>
+                                    <td class="workdescription last">
+                                        Internship at the CGMC: Study and modeling of the stochastic expression of the mCherry gene.
+
+                                        <span class="techlist">Python, R</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </li>
+
+                <li>
+                    <h3>Contact me</h3>
+                    <hr/>
+                    <article>
+                        <p>You can contact me anytime at <code>br@imap.cc</code> (PGP: <a href="/public/br@imap.cc.pgp">0x74FC6BD7</a>).
+
+                        <p>I also regularly use these social networks:
+                        <ul>
+                            <li><a href="https://keybase.io/brouberol">Keybase</a></li>
+                            <li><a href="https://twitter.com/brouberol">Twitter</a></li>
+                            <li><a href="https://github.com/brouberol">Github</a></li>
+			    <li><a href="https://www.linkedin.com/pub/balthazar-rouberol/a8/857/451">LinkedIn</a></li>
+                            <li><a href="https://stackoverflow.com/users/1497947/balthazar-rouberol">Stack Overflow</a></li>
+                            <li><a href="https://www.reddit.com/user/BaltoRouberol/">Reddit</a></li>
+                        </ul>
+                        </p>
+                    </article>
+                </li>
+
+                <li class="left">
+                    <h3>Education</h3>
+                    <hr/>
+                    <article>
+                        <p
+                            >I graduated from <b><abbr title="National Institude of Applied Sciences">INSA</abbr> de Lyon</b> in 2012, with a Computational Biology engineer degree.
+                        </p>
+                        <p>
+                            I spent the last semester of my 5th year in Montevideo, Uruguay, studying mathematics, data compression and <abbr title="High Performance Computing">HPC</abbr> at the Universidad de la Republica.
+                        </p>
+                    </article>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="blockgrid" id="skillset">
+            <h2>Skillset</h2>
+            <ul class="list-unstyled">
+
+                <li>
+                    <h3>I regularly use</h3>
+                    <hr/>
+                    <article>
+                        <ul>
+                            <li><b>GNU/Linux</b>: OpenSuse, Linux Mint, Fedora, Debian, Raspbian</li>
+                            <li><b>Python, Go</b>, bash/zsh, javascript</li>
+                            <li><b>Git</b>/Github, Bitbucket</li>
+                            <li><b>nginx</b></li>
+                            <li>uWSGI</li>
+                            <li>ansible</li>
+                            <li>redis</li>
+                            <li>Mint tea</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <li>
+                    <h3>Tools I enjoy</h3>
+                    <hr/>
+                    <article>
+                        <ul>
+                            <li>Web frameworks: <b>Flask</b>, Django</li>
+                            <li>Databases: <b>MongoDB, MySQL</b>, PostgreSQL</li>
+                            <li>Cache engine: <b>redis</b></li>
+                            <li>Web scraping/crawling: Scrapy, BeautifulSoup</li>
+                            <li>Worker queues: <b>Celery</b></li>
+                            <li>Process control: supervisor, circus</li>
+                            <li>Message queues: <b>redis</b>, rabbitMQ</li>
+                            <li><abbr title="Continuous Integration">CI</abbr> and deployment: <b>Jenkins</b>, <b>Ansible</b>, fabric</li>
+                            <li>Text editor: Sublime Text, emacs</li>
+                            <li>Tinkering and learning: <b>Raspberry Pi</b></li>
+                            <li>Napping</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <li>
+                    <h3>I sometimes write about stuff... </h3>
+                    <hr/>
+                    <article>
+                        <p>
+                            Here is the <a href="http://balthazar-rouberol.com/blog/feed/">RSS</a>.
+                        </p>
+                        <p>
+                            <ul>
+                                <li><a href="http://balthazar-rouberol.com/blog/2013/12/01/my-first-day-with-firefox-os/">My first day with Firefox OS</a> - <span class="text-muted">2013/12/01</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/10/04/debugging-of-my-wifi-connection/">Debugging of my wifi connection</a> - <span class="text-muted">2013/10/04</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/07/06/how-to-securely-exchange-and-sign-a-pgp-key/">How to securely exchange and sign a PGP key</a> - <span class="text-muted">2013/07/06</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/07/04/offline-browsing-of-the-python-documentation/">Offline browsing of the Python documentation</a> - <span class="text-muted">2013/07/04</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/06/08/raspberry-pi-3-months-after/">Raspberry Pi, 3 months after</a> - <span class="text-muted">2013/06/08</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/03/23/raspberry-pi-2-days-after/">Raspberry Pi, 2 days after</a> - <span class="text-muted">2013/03/23</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2013/03/15/how-i-got-mugged-and-what-i-learnt-from-it/">How I got mugged and what I learnt from it</a> - <span class="text-muted">2013/03/15</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2012/11/25/comparison-of-face-detection-tools-face-com-opencv-libccv/">Comparison of face detection tools (face.com, openCV, libccv)					</a> - <span class="text-muted">2012/11/25</span></li>
+<li><a href="http://balthazar-rouberol.com/blog/2012/09/05/how-to-remain-sane-while-working-from-home/">How to remain sane while working from home?					</a> - <span class="text-muted">2012/09/05</span></li>
+                            </ul>
+                        </p>
+                        <p>
+                        </p>
+                    </article>
+                </li>
+
+                <li>
+                    <h3>... and sometimes, I talk about it.</h3>
+                    <article>
+                        <ul>
+                            <li><a href="http://brouberol-talks.appspot.com/2015/webstack/webstack.slide#1">Le backend d'une application web python (French)</a> • <span class="text-muted">April 2015</a></span> - Apéro Python</li>
+                            <li><a href="http://brouberol-talks.appspot.com/2014/py2go/py2go.slide#1">De Python à Go? Découvrir l'écosystème Go (French)</a> • <span class="text-muted">October 2014</span> - PyConFR</li>
+                            <li><a href="slides/celery-intro/?theme=simple#/">Introduction à Celery</a> • <span class="text-muted">May 2014</span> - Apéro Python</li>
+                            <li><a href="https://github.com/AFPy/jdll-2014">Atelier d'introduction à Python de 3h</a> • <span class="text-muted">April 2014</span> - <a href="http://www.jdll.org">Journées du Logiciel Libre</a></li>
+                            <li><a href="slides/first-flask-app">Deploying your first Flask app - Lessons learned</a> • <span class="text-muted">May 2014</span> - Rejected <a href="http://pycon.se/">PyCon SE</a> proposal</li>
+                            <li><a href="slides/mlintro/">Introdution au Machine Learning</a> (French) • <span class="text-muted">November 2013</span> - Apéro Python</li>
+                            <li><a href="slides/web-crawling/">De la page blanche au web-crawler en moins d'une heure</a> (French) • <span class="text-muted">May 2013</span> - Atelier de la Cusisine du Web à l'EPITECH de Lyon</li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="blockgrid" id="personal">
+            <h2>Personal life</h2>
+            <ul class="list-unstyled">
+
+                <li>
+                    <h3>Personal involvement</h3>
+                    <hr/>
+                    <article>
+                        <ul>
+                            <li>Member of the <abbr title="Association Francophone Python">AFPY</abbr> association</li>
+                            <li>Member of the organising team of <a href="http://fhacktory.com/">Fhacktory 2015</a></li>
+                            <li>Member of the organising team of <a href="http://pycon.fr/2014">PyConFR 2014</a></li>
+                            <li>Webmaster of <a href="http://lantreautre.fr">L'Antre Autre</a>, a cultural cafe in Lyon.</li>
+			    <li>Regular donor to La Quadrature Du Net, Mozilla, Framasoft and Wikipedia</li>
+				<a href="https://soutien.laquadrature.net/" title="Soutenons La Quadrature du Net !" alt="Soutenons La Quadrature du Net !"><img src="https://soutien.laquadrature.net/static/images/dont_ the internet_300*100.png" alt="Soutenons La Quadrature du Net !" /></a>
+
+                        </ul>
+                    </article>
+                </li>
+                <li>
+                    <h3>Hobbies</h3>
+                    <hr/>
+                    <article>
+                        <p>
+                            I seriously enjoy reading: I always keep a couple of books in my backpack, you never know when you could offer them to someone. My favorites are:
+                            <ul>
+                                <li>A brief history of time - Stephen Hawking</li>
+                                <li>Sword of Truth - Terry Goodkind</li>
+                                <li>In search of Schrødinger's cat - John Gribbin</li>
+                                <li>1984 - Georges Orwell</li>
+                                <li>Fictions - Borges</li>
+                                <li>The Silmarillion - J.R.R Tolkien</li>
+                                <li>Cyrano de Bergerac - Edmond Rostand</li>
+                            </ul>
+                        </p>
+                        <p>
+                            I also practice Tai Chi Chuan, and preach the mighty power of napping and meditation over caffeine.
+                        </p>
+                    </article>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <footer class="container">
+            <span class="pull-left">Made with Bootstrap, Sublime Text, Python and ❤ - Hosted on my Raspberry Pi</span>
+            <span class="pull-right">Balthazar Rouberol - 2015.</span>
+        </footer>
+    </div>
+  </body>
+</html>
