@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../font/Merriweather-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../font/RobotoSlab-Light.ttf');
+}
+
 body {
     line-height: 1.7em;
     font-family: 'Merriweather', serif;
