@@ -115,6 +115,7 @@ article ul {
 
 .blockgrid img {
     margin-bottom: 1em;
+    border-radius: 2%;
 }
 
 /* color of each section */
