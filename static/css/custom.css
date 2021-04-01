@@ -133,7 +133,7 @@ td.workdescription {
 }
 
 table#resume td {
-    padding-bottom: 1.3em;
+    padding-bottom: 2em;
 }
 
 table#resume td:nth-child(even) {
