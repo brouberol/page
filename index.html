@@ -67,7 +67,7 @@
                     <h3>Experience (<a href="/public/Resume.pdf">PDF</a>)</h3>
                     <hr />
                     <article>
-                        <table id="resume">
+                        <table class="resume">
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
@@ -187,151 +187,180 @@
                                         <span class="techlist">py.test, TravisCI</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Independant contractor</span>
-                                        <span class="workplace"><a href="http://askin.fr/">Askin</a></span>
-                                        <span class="workperiod">Feb - June 2015</span>
-                                    </td>
-                                    <td class="workposition">
-                                        <p>Re-implementation of the backend of a large, monolithic django application
-                                            exposing complex advertisement data into a distributed application:
-                                        <ul>
-                                            <li>re-establishing <b>good practices</b>: unit testing, coding standards,
-                                                code review, continuous integration</li>
-                                            <li>distribution of workload across a cluster of servers</li>
-                                            <li>porting of data import jobs from cron jobs to distributed tasks, leading
-                                                to a speedup (x10)</li>
-                                            <li>performance <b>monitoring and code optimisation</b></li>
-                                            <li>development of the Ansible <b>deployment</b> playbooks</li>
-                                            <li>server administration</li>
-                                        </ul>
-                                        </p>
-                                        <span class="techlist">Django, Celery, Ansible</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Independant contractor</span>
-                                        <span class="workplace"><a href="http://www.metallapan.se/">Metallapan</a> -
-                                            Edinburgh</span>
-                                        <span class="workperiod">Oct 2014 - Jan 2015</span>
-                                    </td>
-                                    <td class="workposition">
-                                        <p>Building systems to support the Scotland Land Registry Act (2012),
-                                            specifically allowing the creation of Advance Notices when
-                                            selling/transferring deeds. Integration of new and legacy systems.</p>
-                                        <p>Annex missions: third line customer support and internal Python mentoring.
-                                        </p>
-                                        <span class="techlist">Celery, Flask, AngularJS, mongoDB, gunicorn</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">R&amp;D software engineer</span>
-                                        <span class="workplace"><a href="http://mapado.com">Mapado</a></span>
-                                        <span class="workperiod">Nov 2012 - Oct 2014</span>
-                                    </td>
-                                    <td class="workposition">
-                                        Implementation of an automatic <b>datamining/text-mining</b> pipeline
-                                        aggregating and merging data from various sources (API dumps, Facebook, database
-                                        dumps, crawled web pages, DBPedia, etc) into an informative event description.
-                                        The pipeline processes tens of thousands of documents every day, using internal
-                                        <b>web-services</b> and <b>distributed worker queues</b> (celery).
-
-                                        <span class="techlist">Python, scikit-learn, Scrapy, Flask, uWSGI, Celery,
-                                            ElasticSearch, mongoDB, nginx</span><br />
-
-                                        Design and implementation of a JS framework mapping in-house client data to
-                                        external forms, thus filling them automatically using a declarative language.
-
-                                        <span class="techlist">nodeJS, CasperJS</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Software developer</span>
-                                        <span class="workplace"><a href="http://kozea.fr/">Kozea</a></span>
-                                        <span class="workperiod">Oct - Nov 2012</span>
-                                    </td>
-                                    <td class="workposition">
-                                        Development of <a href="http://pynuts.org">Pynuts</a>, a document/database
-                                        oriented Flask extension simplifying the implementation of the generic views of
-                                        a web app.
-
-                                        <span class="techlist">Flask, SQLAlchemy</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Independent contractor</span>
-                                        <span class="workplace"><a
-                                                href="http://emilytoop.com/tiny-ears/">TinyEars</a></span>
-                                        <span class="workperiod">June 2012</span>
-                                    </td>
-                                    <td class="workdescription">
-                                        Voice recognition research.
-                                        Adapting and training of a PocketSphinx acoustic model using pre-recorded data,
-                                        in order to enhance recognition performances on feminine voices.
-                                        <span class="techlist">CMU Sphinx, PocketSphinx</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Intern</span>
-                                        <span class="workplace"><a href="http://strongsteam.com">Strongsteam</a></span>
-                                        <span class="workperiod">Feb - July 2012</span>
-                                    </td>
-                                    <td class="workdescription">
-                                        Development of a data-mining and A.I. cloud-based API to extract information out
-                                        of images, video, audio and text files: RESTful API development, OCR research.
-                                        Home based. See <a href="https://www.youtube.com/watch?v=ZW5hC4y9nuU">our</a> <a
-                                            href="https://www.youtube.com/watch?v=b1OkQLAazWw">demos</a>.
-
-                                        <span class="techlist">Flask, ElasticSearch, Tesseract</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workplace"><abbr
-                                                title="National Institude of Applied Sciences">INSA</abbr> de
-                                            Lyon</span>
-                                        <span class="workperiod">Jan - Feb 2012</span>
-                                    </td>
-                                    <td class="workdescription">
-                                        Development of an alumni network.
-
-                                        <span class="techlist">Django, Twitter Bootstrap</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition">
-                                        <span class="workposition">Intern</span>
-                                        <span class="workplace">A+A</span>
-                                        <span class="workperiod">April - July 2011</span>
-                                    </td>
-                                    <td class="workdescription">
-                                        Development of a statistical analysis and visualization web app.
-
-                                        <span class="techlist">C#, LINQ</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workposition last">
-                                        <span class="workposition">Intern</span>
-                                        <span class="workplace"><abbr
-                                                title="Center of Molecular and Cellular Genetics">CGMC</abbr></span>
-                                        <span class="workperiod">June - Aug 2010</span>
-                                    </td>
-                                    <td class="workdescription last">
-                                        Internship at the CGMC: Study and modeling of the stochastic expression of the
-                                        mCherry gene.
-
-                                        <span class="techlist">Python, R</span>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
+                        <details class="details-example">
+                            <summary id=resume-summary>See more</summary>
+                            <table class="resume">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Independant contractor</span>
+                                            <span class="workplace"><a href="http://askin.fr/">Askin</a></span>
+                                            <span class="workperiod">Feb - June 2015</span>
+                                        </td>
+                                        <td class="workposition">
+                                            <p>Re-implementation of the backend of a large, monolithic django
+                                                application
+                                                exposing complex advertisement data into a distributed application:
+                                            <ul>
+                                                <li>re-establishing <b>good practices</b>: unit testing, coding
+                                                    standards,
+                                                    code review, continuous integration</li>
+                                                <li>distribution of workload across a cluster of servers</li>
+                                                <li>porting of data import jobs from cron jobs to distributed tasks,
+                                                    leading
+                                                    to a speedup (x10)</li>
+                                                <li>performance <b>monitoring and code optimisation</b></li>
+                                                <li>development of the Ansible <b>deployment</b> playbooks</li>
+                                                <li>server administration</li>
+                                            </ul>
+                                            </p>
+                                            <span class="techlist">Django, Celery, Ansible</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Independant contractor</span>
+                                            <span class="workplace"><a href="http://www.metallapan.se/">Metallapan</a> -
+                                                Edinburgh</span>
+                                            <span class="workperiod">Oct 2014 - Jan 2015</span>
+                                        </td>
+                                        <td class="workposition">
+                                            <p>Building systems to support the Scotland Land Registry Act (2012),
+                                                specifically allowing the creation of Advance Notices when
+                                                selling/transferring deeds. Integration of new and legacy systems.</p>
+                                            <p>Annex missions: third line customer support and internal Python
+                                                mentoring.
+                                            </p>
+                                            <span class="techlist">Celery, Flask, AngularJS, mongoDB, gunicorn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">R&amp;D software engineer</span>
+                                            <span class="workplace"><a href="http://mapado.com">Mapado</a></span>
+                                            <span class="workperiod">Nov 2012 - Oct 2014</span>
+                                        </td>
+                                        <td class="workposition">
+                                            Implementation of an automatic <b>datamining/text-mining</b> pipeline
+                                            aggregating and merging data from various sources (API dumps, Facebook,
+                                            database
+                                            dumps, crawled web pages, DBPedia, etc) into an informative event
+                                            description.
+                                            The pipeline processes tens of thousands of documents every day, using
+                                            internal
+                                            <b>web-services</b> and <b>distributed worker queues</b> (celery).
+
+                                            <span class="techlist">Python, scikit-learn, Scrapy, Flask, uWSGI, Celery,
+                                                ElasticSearch, mongoDB, nginx</span><br />
+
+                                            Design and implementation of a JS framework mapping in-house client data to
+                                            external forms, thus filling them automatically using a declarative
+                                            language.
+
+                                            <span class="techlist">nodeJS, CasperJS</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Software developer</span>
+                                            <span class="workplace"><a href="http://kozea.fr/">Kozea</a></span>
+                                            <span class="workperiod">Oct - Nov 2012</span>
+                                        </td>
+                                        <td class="workposition">
+                                            Development of <a href="http://pynuts.org">Pynuts</a>, a document/database
+                                            oriented Flask extension simplifying the implementation of the generic views
+                                            of
+                                            a web app.
+
+                                            <span class="techlist">Flask, SQLAlchemy</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Independent contractor</span>
+                                            <span class="workplace"><a
+                                                    href="http://emilytoop.com/tiny-ears/">TinyEars</a></span>
+                                            <span class="workperiod">June 2012</span>
+                                        </td>
+                                        <td class="workdescription">
+                                            Voice recognition research.
+                                            Adapting and training of a PocketSphinx acoustic model using pre-recorded
+                                            data,
+                                            in order to enhance recognition performances on feminine voices.
+                                            <span class="techlist">CMU Sphinx, PocketSphinx</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Intern</span>
+                                            <span class="workplace"><a
+                                                    href="http://strongsteam.com">Strongsteam</a></span>
+                                            <span class="workperiod">Feb - July 2012</span>
+                                        </td>
+                                        <td class="workdescription">
+                                            Development of a data-mining and A.I. cloud-based API to extract information
+                                            out
+                                            of images, video, audio and text files: RESTful API development, OCR
+                                            research.
+                                            Home based. See <a
+                                                href="https://www.youtube.com/watch?v=ZW5hC4y9nuU">our</a> <a
+                                                href="https://www.youtube.com/watch?v=b1OkQLAazWw">demos</a>.
+
+                                            <span class="techlist">Flask, ElasticSearch, Tesseract</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workplace"><abbr
+                                                    title="National Institude of Applied Sciences">INSA</abbr> de
+                                                Lyon</span>
+                                            <span class="workperiod">Jan - Feb 2012</span>
+                                        </td>
+                                        <td class="workdescription">
+                                            Development of an alumni network.
+
+                                            <span class="techlist">Django, Twitter Bootstrap</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition">
+                                            <span class="workposition">Intern</span>
+                                            <span class="workplace">A+A</span>
+                                            <span class="workperiod">April - July 2011</span>
+                                        </td>
+                                        <td class="workdescription">
+                                            Development of a statistical analysis and visualization web app.
+
+                                            <span class="techlist">C#, LINQ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="workposition last">
+                                            <span class="workposition">Intern</span>
+                                            <span class="workplace"><abbr
+                                                    title="Center of Molecular and Cellular Genetics">CGMC</abbr></span>
+                                            <span class="workperiod">June - Aug 2010</span>
+                                        </td>
+                                        <td class="workdescription last">
+                                            Internship at the CGMC: Study and modeling of the stochastic expression of
+                                            the
+                                            mCherry gene.
+
+                                            <span class="techlist">Python, R</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
                     </article>
                 </li>
 

@@ -132,16 +132,21 @@ td.workdescription {
     vertical-align: text-top;
 }
 
-table#resume td {
-    padding-bottom: 2em;
+table.resume td {
+    padding-bottom: 3em;
 }
 
-table#resume td:nth-child(even) {
+table.resume td:nth-child(even) {
     padding-left: 1.3em;
 }
 
-table#resume td.last {
+table.resume td.last {
     padding-bottom: 0em;
+}
+
+summary#resume-summary {
+    text-align: center;
+    padding-bottom: 2em;
 }
 
 span.workposition {
