@@ -20,6 +20,9 @@
         --img-border-color: #eee;
         --footer-background-color: rgb(249, 249, 249);
         --footer-text-color: rgb(127, 140, 141);
+        --code-background-color: #f9f2f4;
+        --details-span-color: #999;
+
     }
 }
 
@@ -37,6 +40,8 @@
         --footer-background-color: rgb(65, 65, 65);
         --footer-text-color: var(--text-color);
         --link-color: #eb9696;
+        --code-background-color: var(--footer-background-color);
+        --details-span-color: rgb(201, 200, 200);;
     }
 
     img {
@@ -231,4 +236,12 @@ abbr[title] {
 .img-thumbnail {
     background-color: var(--background-color);
     border: 1px solid var(--img-border-color);
+}
+
+code {
+    background-color: var(--code-background-color);
+}
+
+span.text-muted, span.techlist {
+    color: var(--details-span-color);
 }
