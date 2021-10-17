@@ -8,24 +8,72 @@
   src: url('../font/RobotoSlab-Light.ttf');
 }
 
+@media (prefers-color-scheme: light) {
+    /* Light theme styles go here */
+    :root {
+        --background-color: #fff;
+        --text-color: #333;
+        --title-color: #000;
+        --box-shadow-color: #888;
+        --blockgrid-header-box-shadow-color: var(--background-color);
+        --box-shadow-style: 0 0 1px rgb(128, 128, 128);
+        --img-border-color: #eee;
+        --footer-background-color: rgb(249, 249, 249);
+        --footer-text-color: rgb(127, 140, 141);
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    /* Dark theme styles go here */
+    :root {
+        --background-color: #313537;
+        --text-color: #e1e1e1;
+        --title-color: rgb(228, 226, 226);
+        --box-shadow-color: #888;
+        --blockgrid-header-box-shadow-color: var(--box-shadow-color);
+        --box-shadow-style: 0 0 2px var(--box-shadow-color);
+        --img-border-color: var(--background-color);
+        --footer-background-color: rgb(65, 65, 65);
+        --footer-text-color: var(--text-color);
+        --link-color: #eb9696;
+    }
+
+    img {
+        /* Dim the images to avoid hurting the eyes */
+        filter: brightness(.8) contrast(1.2);
+    }
+
+    a, a:hover {
+        color: var(--link-color);
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+}
+
 body {
     line-height: 1.7em;
     font-family: 'Merriweather', serif;
     font-weight: 300;
     font-size: 1.2em;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
+
 
 header {
     width: 100%;
     text-align: center;
     border-radius: 0px 0 5px 5px;
-    color: rgb(34, 34, 34);
     padding-bottom: 1em;
 }
 
 header, h1, h2, h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
+    color: var(--title-color);
 }
 
 header h1 {
@@ -55,7 +103,7 @@ ul.navbar-nav li.active {
 }
 
 .blockgrid > ul > li {
-    box-shadow: 0 0 2px #888;
+    box-shadow: var(--box-shadow-style);
     border-width: 1px;
     border-radius: 7px;
     margin-bottom: 20px;
@@ -98,7 +146,6 @@ article ul {
 .blockgrid h3, .blockgrid h2 {
     text-align: center;
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid #fff;
 }
 
 .blockgrid h2 {
@@ -109,8 +156,9 @@ article ul {
     line-height: 40px;
     margin: 0px;
     width: 100%;
-    margin-bottom: -1em;
+    margin-bottom: 1em;
     font-size: 1.7em;
+    box-shadow: var(--box-shadow-style);
 }
 
 .blockgrid img {
@@ -119,9 +167,9 @@ article ul {
 }
 
 /* color of each section */
-.blockgrid h3 {
+/* .blockgrid h3 {
     color: rgb(34, 34, 34);
-}
+} */
 
 /* style of the "work" table */
 td.workposition {
@@ -170,12 +218,17 @@ span.techlist {
 }
 
 footer {
-    color: rgb(127, 140, 141);
-    background: rgb(249, 249, 249);
+    color: var(--footer-text-color);
+    background: var(--footer-background-color);
     border-radius: 5px 5px 0 0;
     padding: 15px;
 }
 
 abbr[title] {
     border-bottom: none;
+}
+
+.img-thumbnail {
+    background-color: var(--background-color);
+    border: 1px solid var(--img-border-color);
 }
