@@ -6,8 +6,8 @@
     <meta name="description" content="Balthazar Rouberol's personal webpage">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/custom.css" rel="stylesheet">
+    <link rel="preload" as="style" href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" as="style" href="static/css/custom.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -30,11 +30,12 @@
                 <li>
                     <h3>Hi, that's me!</h3>
                     <article>
-                        <img class="img-thumbnail center-block" src="static/img/image.jpg" title="Photo by Paul Adenot"
-                            alt="Photo by Paul Adenot" decoding=async loading=lazy>
+                        <img class="img-thumbnail center-block" src="static/img/portrait.webp"
+                            title="Photo by Paul Adenot" alt="Photo by Paul Adenot" decoding=async loading=lazy>
                         <p>
                             I'm a {{age}} year old French <b>backend engineer</b>, currently employed as the Release
-                            Platform Team Lead at <a href="https://datadoghq.com">Datadog</a>. I am based in Ardèche, France.
+                            Platform Team Lead at <a href="https://datadoghq.com">Datadog</a>. I am based in Ardèche,
+                            France.
                         </p>
                         <p>I have fierce <b>self-learning and communication skills</b>. I have worked on extremely large
                             and complex distributed systems, and I've realized that we should always strive to <b>avoid
@@ -585,6 +586,6 @@
     fathom('set', 'siteId', 'PWPHJ');
     fathom('trackPageview');
 </script>
-<script src="static/js/index.js" rel="text/javascript"></script>
+<script async src="static/js/index.js" rel="text/javascript"></script>
 
 </html>
