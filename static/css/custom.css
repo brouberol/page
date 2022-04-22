@@ -200,6 +200,7 @@ table.resume td.last {
 summary#resume-summary {
     text-align: center;
     padding-bottom: 2em;
+    cursor: pointer;
 }
 
 span.workposition {
