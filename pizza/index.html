@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Balthazar Rouberol">
+    <meta name="description" content="Neapolitan pizza recipe">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <title>
+        Neapolitan pizza recipe
+    </title>
+    <style>
+        .container {
+            margin: auto;
+            padding: 3em 1.5em;
+        }
+
+        #title {
+            padding-bottom: 1em;
+        }
+
+        #ingredients {
+            padding-bottom: 1em;
+        }
+    </style>
+    <div class="container">
+        <h1 id="title" class="fs-1">Neapolitan pizza recipe</h1>
+        <div id="ingredients">
+            <div class="input-group mb-3">
+                <span class="input-group-text">🍕 Number of pizzas</span>
+                <input id="pizza-count" type="number" class="form-control" value="6" aria-describedby="pizza-count"
+                    min="1" max="30">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">💦 Hydration (%)</span>
+                <input id="hydration" type="number" class="form-control" value="65" aria-describedby="hydration"
+                    min="60" max="100">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">⚖️ Dough weight (g)</span>
+                <input id="dough-weight" type="number" class="form-control" value="250" aria-describedby="dought-weight"
+                    min="150" max="280">
+            </div>
+            <div class="input-group mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="fresh-yeast" checked>
+                    <label class="form-check-label" for="fresh-yeast">
+                        Fresh yeast
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="recipe">
+            <ul class="list-group">
+                <li class="list-group-item">Flour: <span id=flour></span>g</li>
+                <li class="list-group-item">Water: <span id=water></span>mL</li>
+                <li class="list-group-item">Salt: <span id="salt"></span>g</li>
+                <li class="list-group-item">Yeast: <span id="yeast"></span>g</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        const computeRecipe = () => {
+            let pizzaCount = parseInt($("#pizza-count").val());
+            let hydration = parseInt($("#hydration").val());
+            let weightPerDough = parseInt($("#dough-weight").val());
+            let freshYeast;
+            if ($("#fresh-yeast")[0].checked === true) {
+                freshYeast = true;
+            } else {
+                freshYeast = false;
+            }
+
+            let flour = Math.round(weightPerDough / (1 + (hydration / 100))) * pizzaCount;
+            let water = Math.round(weightPerDough * pizzaCount - flour);
+            let salt = Math.round(flour * 0.02);
+            let yeast = Math.round(0.3 * pizzaCount * 100) / 100;
+            if (freshYeast) {
+                yeast = yeast * 2;
+            }
+
+            $("#flour").text(flour);
+            $("#water").text(water);
+            $("#salt").text(salt);
+            $("#yeast").text(yeast);
+        }
+
+        $(document).ready(() => {
+            computeRecipe();
+        })
+
+        $("#pizza-count").change(() => {
+            computeRecipe();
+        })
+
+        $("#hydration").change(() => {
+            computeRecipe();
+        })
+
+        $("#dough-weight").change(() => {
+            computeRecipe();
+        })
+
+        $("#fresh-yeast").change(() => {
+            computeRecipe();
+        })
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
