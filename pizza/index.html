@@ -16,6 +16,12 @@
         Neapolitan pizza recipe
     </title>
     <style>
+        @font-face {
+            font-family: 'Delicious';
+            src: url('Delicious.ttf');
+            font-display: swap;
+        }
+
         .container {
             margin: auto;
             padding: 3em 1.5em;
@@ -26,8 +32,14 @@
             padding-top: 2em;
         }
 
-        h3 {
-            padding-bottom: 0.5em;
+        h1,
+        h2 {
+            font-size: 2rem;
+            font-family: 'Delicious';
+        }
+
+        h2 {
+            padding-bottom: 0.2em;
         }
     </style>
     <div class="container">
@@ -58,7 +70,7 @@
             </div>
         </div>
         <div id="proportions" class="container-md">
-            <h3>Proportions</h3>
+            <h2>Proportions</h2>
             <ul class="list-group">
                 <li class="list-group-item">Flour: <span id=flour></span>g</li>
                 <li class="list-group-item">Water: <span id=water></span>mL</li>
@@ -68,7 +80,7 @@
         </div>
 
         <div id="recipe" class="container-md">
-            <h3>Recipe</h3>
+            <h2>Recipe</h2>
             <ol>
                 <li>Mix the flour and the water (except for 50mL) in a bowl. Put a damp towel on the bowl and let it
                     rest for 2 hours.</li>
