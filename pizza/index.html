@@ -148,22 +148,13 @@
             computeRecipe();
         })
 
-        document.getElementById("pizza-count").addEventListener("change", () => {
-            computeRecipe();
-        })
+        let elementIdsTriggeringRecompute = ["pizza-count", "hydration", "dough-weight", "fresh-yeast"];
 
-        document.getElementById("hydration").addEventListener("change", () => {
-            computeRecipe();
+        elementIdsTriggeringRecompute.forEach((id) => {
+            document.getElementById(id).addEventListener("change", () => {
+                computeRecipe();
+            })
         })
-
-        document.getElementById("dough-weight").addEventListener("change", () => {
-            computeRecipe();
-        })
-
-        document.getElementById("fresh-yeast").addEventListener("change", () => {
-            computeRecipe();
-        })
-
     </script>
 </head>
 
