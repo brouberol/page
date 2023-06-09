@@ -127,12 +127,7 @@
             let pizzaCount = parseInt(document.getElementById("pizza-count").value);
             let hydration = parseInt(document.getElementById("hydration").value);
             let weightPerDough = parseInt(document.getElementById("dough-weight").value);
-            let freshYeast;
-            if (document.getElementById("fresh-yeast").checked === true) {
-                freshYeast = true;
-            } else {
-                freshYeast = false;
-            }
+            let freshYeast = document.getElementById("fresh-yeast").checked;
 
             let flour = Math.round(weightPerDough / (1 + (hydration / 100))) * pizzaCount;
             let water = Math.round(weightPerDough * pizzaCount - flour);
