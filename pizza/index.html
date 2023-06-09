@@ -10,8 +10,6 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <title>
         Neapolitan pizza recipe
     </title>
@@ -105,11 +103,11 @@
 
     <script>
         const computeRecipe = () => {
-            let pizzaCount = parseInt($("#pizza-count").val());
-            let hydration = parseInt($("#hydration").val());
-            let weightPerDough = parseInt($("#dough-weight").val());
+            let pizzaCount = parseInt(document.getElementById("pizza-count").value);
+            let hydration = parseInt(document.getElementById("hydration").value);
+            let weightPerDough = parseInt(document.getElementById("dough-weight").value);
             let freshYeast;
-            if ($("#fresh-yeast")[0].checked === true) {
+            if (document.getElementById("fresh-yeast").checked === true) {
                 freshYeast = true;
             } else {
                 freshYeast = false;
@@ -123,30 +121,31 @@
                 yeast = yeast * 2;
             }
 
-            $("#dough-ball-weight").text(weightPerDough);
-            $("#flour").text(flour);
-            $("#water").text(water);
-            $("#salt").text(salt);
-            $("#yeast").text(yeast);
+            document.getElementById("dough-ball-weight").textContent = weightPerDough;
+            document.getElementById("flour").textContent = flour;
+            document.getElementById("water").textContent = water;
+            document.getElementById("salt").textContent = salt;
+            document.getElementById("yeast").textContent = yeast;
         }
 
-        $(document).ready(() => {
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("plop")
             computeRecipe();
         })
 
-        $("#pizza-count").change(() => {
+        document.getElementById("pizza-count").addEventListener("change", () => {
             computeRecipe();
         })
 
-        $("#hydration").change(() => {
+        document.getElementById("hydration").addEventListener("change", () => {
             computeRecipe();
         })
 
-        $("#dough-weight").change(() => {
+        document.getElementById("dough-weight").addEventListener("change", () => {
             computeRecipe();
         })
 
-        $("#fresh-yeast").change(() => {
+        document.getElementById("fresh-yeast").addEventListener("change", () => {
             computeRecipe();
         })
 
