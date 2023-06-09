@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Balthazar Rouberol">
     <meta name="description" content="Neapolitan pizza recipe">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
@@ -17,19 +19,20 @@
         .container {
             margin: auto;
             padding: 3em 1.5em;
+            line-height: 1.9em;
         }
 
-        #title {
-            padding-bottom: 1em;
+        .container-md {
+            padding-top: 2em;
         }
 
-        #ingredients {
-            padding-bottom: 1em;
+        h3 {
+            padding-bottom: 0.5em;
         }
     </style>
     <div class="container">
         <h1 id="title" class="fs-1">Neapolitan pizza recipe</h1>
-        <div id="ingredients">
+        <div id="ingredients" class="container-md">
             <div class="input-group mb-3">
                 <span class="input-group-text">🍕 Number of pizzas</span>
                 <input id="pizza-count" type="number" class="form-control" value="6" aria-describedby="pizza-count"
@@ -41,7 +44,7 @@
                     min="60" max="100">
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text">⚖️ Dough weight (g)</span>
+                <span class="input-group-text">⚖️ Dough ball weight (g)</span>
                 <input id="dough-weight" type="number" class="form-control" value="250" aria-describedby="dought-weight"
                     min="150" max="280">
             </div>
@@ -54,13 +57,32 @@
                 </div>
             </div>
         </div>
-        <div id="recipe">
+        <div id="proportions" class="container-md">
+            <h3>Proportions</h3>
             <ul class="list-group">
                 <li class="list-group-item">Flour: <span id=flour></span>g</li>
                 <li class="list-group-item">Water: <span id=water></span>mL</li>
                 <li class="list-group-item">Salt: <span id="salt"></span>g</li>
                 <li class="list-group-item">Yeast: <span id="yeast"></span>g</li>
             </ul>
+        </div>
+
+        <div id="recipe" class="container-md">
+            <h3>Recipe</h3>
+            <ol>
+                <li>Mix the flour and the water (except for 50mL) in a bowl. Put a damp towel on the bowl and let it
+                    rest for 2 hours.</li>
+                <li>After 1h45, incorporate the yeast with the rest of the water, stir, and let it rest for 15 minutes.
+                </li>
+                <li>After 15 minutes, incorporate the yeast and water in the bowl, and mix by hand for a minute.</li>
+                <li>Add the salt, and knead the dough until it is puffy (5 minutes in the mixer or 20 minutes by hand).
+                </li>
+                <li>Reserve the dough in a large tupperware with a bit of olive oil at the bottom. Leave it at room
+                    temperature for 24h or in the fridge for 72h.</li>
+                <li>Divide the dough in dough balls of <span id="dough-ball-weight"></span>g, and put them in a plastic
+                    tray containing a bit of flour. Cover with a damp towel or a lid for 2 hours.</li>
+                <li><a href="https://youtu.be/usGtMUGH33s?t=344">Shape, garnish, cook</a>, eat, <s>pray, love</s></li>
+            </ol>
         </div>
 
     </div>
@@ -85,6 +107,7 @@
                 yeast = yeast * 2;
             }
 
+            $("#dough-ball-weight").text(weightPerDough);
             $("#flour").text(flour);
             $("#water").text(water);
             $("#salt").text(salt);
