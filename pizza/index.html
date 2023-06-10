@@ -66,6 +66,10 @@
             font-size: calc(1.8rem + .9vw);
             padding-bottom: 0.2em;
         }
+
+        .input-group-text abbr {
+            text-decoration-color: lightgray;
+        }
     </style>
     <div class="container">
         <h1 id="title">Neapolitan pizza recipe</h1>
@@ -76,7 +80,8 @@
                     min="1" max="30">
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text">💦 Hydration (%)</span>
+                <span class="input-group-text">💦 <abbr
+                        title="Proportion of water compared to the weight of flour">Hydration</abbr> (%)</span>
                 <input id="hydration" type="number" class="form-control" value="65" aria-describedby="hydration"
                     min="60" max="100">
             </div>
